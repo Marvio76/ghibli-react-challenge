@@ -1,0 +1,212 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fundo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container principal - NÃO MUDAR */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Estilos dos controles (caixas de busca, filtros) */
+.controls,
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Barra de pesquisa com ícone de lupa */
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    background: #f1f1f1;
+}
+
+.barra-pesquisa img {
+    width: 18px;
+    height: 18px;
+}
+
+.barra-pesquisa input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.barra-pesquisa input:focus,
+.barra-pesquisa input:hover {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Inputs, selects, labels padrão */
+.controls input,
+.controls select,
+.filters input,
+.filters select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.controls input:hover,
+.controls select:hover,
+.filters input:hover,
+.filters select:hover {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+}
+
+.controls select:focus,
+.filters select:focus {
+    outline: none;
+    border-color: #2980b9;
+}
+
+/* Labels de filtro */
+.filters label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Estilos dos filmes */
+.film-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.film-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.film-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.film-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.film-card h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+.film-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Botões e interações */
+button {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+}
+
+button:not(:last-child) {
+    margin-right: 10px;
+}
+@media screen and (max-width: 498px) {
+    button:not(:last-child) {
+    margin-right: 0px;
+}
+}
+
+
+.notes textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notes textarea:hover,
+.notes textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+}
+
+.stars {
+    margin-top: 10px;
+}
+
+.stars span {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #f1c40f;
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
+
+.stars span:hover {
+    color: #e67e22;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+input[type="checkbox"]:hover {
+    filter: brightness(1.2);
+}
