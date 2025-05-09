@@ -20,7 +20,7 @@ node -v
 
 ```bash
 # Clone o repositório
-$ git clone https://github.com/nome-usuario/ghibli-films.git
+$ git clone https://github.com/Marvio76/ghibli-react-challenge.git
 $ cd ghibli-films
 
 # Instale as dependências
